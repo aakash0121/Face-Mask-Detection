@@ -59,7 +59,7 @@ def get_boxes(id):
 # cv2.waitKey(0)
 # cv2.destroyAllWindows()
 
-img_size=50
+img_size = 224
 
 
 def create_data():
@@ -70,7 +70,7 @@ def create_data():
                 arr.append(j)
             
             print(arr)
-            img_array=cv2.imread(os.path.join(images,arr[0]),cv2.IMREAD_GRAYSCALE)
+            img_array=cv2.imread(os.path.join(images,arr[0]))
             
             crop_image = img_array[arr[2]:arr[4],arr[1]:arr[3]]
             try:
